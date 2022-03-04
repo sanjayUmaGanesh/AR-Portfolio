@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+ <a-scene 
+ vr-mode-ui="enabled:false;" 
+ embeded 
+ arjs=
+ "trackingMethod:best;
+ sourceType:webcam;
+ debugUIEnabled:false;">
+
+<a-assets>
+  <img id = "card1" src="./VR-AR-ProjectCards/1.png">
+  <img id = "card2" src="./VR-AR-ProjectCards/2.png">
+  <img id = "card3" src="./VR-AR-ProjectCards/3.png">
+  <img id = "card4" src="./VR-AR-ProjectCards/4.png">
+  <img id = "card5" src="./VR-AR-ProjectCards/5s.png">
+</a-assets>
+
+ <!-- Aeroplane project -->
+   <a-marker-camera type="pattern" url="./patt files/pattern-icon-1.patt">
+    <a-plane src="#card1" position="0 0 -1" width="2" height="1.5" rotation ="-90 0 0" ></a-plane>
+   </a-marker-camera>
+  <!-- Food on phone -->
+   <a-marker-camera type="pattern" url="./patt files/pattern-icon-2.patt">
+    <a-plane src="#card2" position="0 0 -1" width="2" height="1.5" rotation ="-90 0 0" ></a-plane>
+  </a-marker-camera>
+  <!-- Google maps but cheaper -->
+  <a-marker-camera type="pattern" url="./patt files/pattern-icon-3.patt">
+    <a-plane src="#card3" position="0 0 -1" width="2" height="1.5" rotation ="-90 0 0" ></a-plane>
+  </a-marker-camera>
+  <!-- Virtual tour for the poor -->
+  <a-marker-camera type="pattern" url="./patt files/pattern-icon-4.patt">
+    <a-plane src="#card4" position="0 0 -1" width="2" height="1.5" rotation ="-90 0 0" ></a-plane>
+  </a-marker-camera>
+  <!-- PFP -->
+  <a-marker-camera type="pattern" url="./patt files/pattern-icon-5.patt">
+    <a-plane src="#card5" position="0 0 -1" width="2" height="1.5" rotation ="-90 0 0" ></a-plane>
+  </a-marker-camera>
+  <!-- shoot that thing -->
+
+ </a-scene>
+
+ 
+</body>
+
+</html>
